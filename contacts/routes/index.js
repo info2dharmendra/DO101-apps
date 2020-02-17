@@ -18,7 +18,7 @@ router.get('/', function(req, res) {
 
     // 'contacts' table exists. Show the records.
     else {
-      pgconn.query('SELECT * FROM contacts', function(err,results) {
+      pgconn.query('SELECT * FROM contacts where id=1', function(err,results) {
         if (err) {
           console.log(err);
           res.render('index', { error: 'Database connection failure! '+err.stack, contacts: null, title: 'Contact List' });
