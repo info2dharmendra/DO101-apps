@@ -26,7 +26,7 @@ router.get('/', function(req, res) {
         else {
           let contacts = results.rows;
           console.log(contacts);
-          res.render('index', { error: null, contacts: contacts, title: 'Contact Listsssss' });
+          res.render('index', { error: null, contacts: contacts, title: 'Contact Listss' });
         }
       })  
     }
